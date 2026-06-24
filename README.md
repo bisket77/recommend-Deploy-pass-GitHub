@@ -114,3 +114,11 @@ git log --oneline
 ```
 
 > หมายเหตุ: เมื่อเชื่อม GitHub Repository เรียบร้อยแล้ว ไม่จำเป็นต้องใช้ `git init` หรือ `git remote add origin` ซ้ำทุกครั้ง
+
+
+
+```bash
+git remote add origin https://github.com/bisket77/SA.git
+git branch -M main
+git push -u origin main
+```
