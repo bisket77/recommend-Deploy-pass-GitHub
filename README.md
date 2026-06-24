@@ -2,9 +2,7 @@
 https://test-ypgs.onrender.com/
 ===============================
 แนะนำการอัพโปรเจ็คเพื่อ Deploy โปรเจ็ค
-
-ขั้นตอนที่ 1
-ทำการ
+===============================
 git init
 git add README.md
 git commit -m "first commit"
@@ -12,6 +10,44 @@ git branch -M main
 git remote add origin https://github.com/bisket77/test2.git
 git push -u origin main
 …or push an existing repository from the command line
+git remote add origin https://github.com/bisket77/test2.git
+git branch -M main
+git push -u origin main
+===============================
+🛠️ ขั้นตอนที่ 1: การติดตั้งโปรแกรม Git ลงเครื่อง (ทำครั้งเดียว)
+เข้าเว็บไซต์ git-scm.com แล้วกดดาวน์โหลดเวอร์ชันสำหรับ Windows
+
+เปิดไฟล์ติดตั้งที่ดาวน์โหลดมา กด Next ไปเรื่อย ๆ ตามค่าเริ่มต้น (Default) จนเสร็จสิ้น
+
+ตรวจสอบการติดตั้ง: เปิด Terminal ใน VS Code หรือ Command Prompt แล้วพิมพ์คำสั่ง:
+
+Bash 
+$ git --version
+(ถ้าขึ้นเลขเวอร์ชัน เช่น git version 2.x.x แปลว่าติดตั้งลงเครื่องเรียบร้อยแล้วครับ)
+
+🔑 ขั้นตอนที่ 2: ตั้งค่าตัวตนบนเครื่องคอมพิวเตอร์ (ทำครั้งเดียว)
+ก่อนจะส่งโค้ดขึ้นคลาวด์ เราต้องบอก Git บนเครื่องก่อนว่าเราคือใคร โดยพิมพ์ 2 คำสั่งนี้ลงใน Terminal:
+
+Bash
+git config --global user.name "ชื่อของคุณเป็นภาษาอังกฤษ"
+git config --global user.email "อีเมลที่ใช้สมัคร GitHub ของคุณ"
+🚀 ขั้นตอนที่ 3: เริ่มต้นผูกโปรเจกต์และส่งโค้ดขึ้น GitHub (ตามใบสั่งของคุณ)
+ให้คุณเปิด Terminal ใน VS Code ให้อยู่ในโฟลเดอร์โปรเจกต์หลักของคุณ แล้วพิมพ์ชุดคำสั่งตามลำดับด้านล่างนี้ได้เลยครับ:
+
+1. ฝั่งสร้างโปรเจกต์ใหม่จากศูนย์ (นิยมใช้ที่สุด)
+หากโฟลเดอร์นี้ยังไม่เคยสร้าง Git มาก่อนเลย ให้รันกลุ่มนี้ทีละบรรทัดครับ:
+
+Bash
+git init                           # 1. สร้างถังเก็บประวัติ Git เปล่าๆ ในโฟลเดอร์เรา
+git add .                          # 2. ทำการเลือกไฟล์ทั้งหมดในโฟลเดอร์เตรียมส่ง (ใช้ . แทนชื่อไฟล์เพื่อให้แอดทั้งหมด)
+git commit -m "first commit"       # 3. บันทึกและตั้งชื่อเวอร์ชันแรก
+git branch -M main                 # 4. เปลี่ยนชื่อสาขาหลักให้เป็นชื่อ "main" ตามมาตรฐานใหม่
+git remote add origin https://github.com/bisket77/test2.git  # 5. ต่อสายลิงก์เชื่อมไปยัง GitHub ปลายทาง
+git push -u origin main            # 6. ผลักดันโค้ดบนเครื่องทั้งหมดทะยานขึ้น GitHub ปลายทาง
+2. ฝั่งกรณีเคยทำ Git บนเครื่องไว้แล้ว (มีห้องเก็บประวัติอยู่แล้ว)
+ถ้าก่อนหน้านี้คุณเคยรัน git init และเคย commit ไว้ในเครื่องแล้ว แต่อยากจะผูกลิงก์เพื่อส่งขึ้น GitHub ไปที่ลิงก์ใหม่ ให้รันสั้น ๆ แค่กลุ่มนี้พอครับ:
+
+Bash
 git remote add origin https://github.com/bisket77/test2.git
 git branch -M main
 git push -u origin main
