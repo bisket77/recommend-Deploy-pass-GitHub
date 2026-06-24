@@ -1,40 +1,70 @@
+# 🚀 Deploy Project
 
-https://test-ypgs.onrender.com/
-===============================
-แนะนำการอัพโปรเจ็คเพื่อ Deploy โปรเจ็ค
-===============================
-**🛠️ ขั้นตอนที่ 1 :** การติดตั้งโปรแกรม Git ลงเครื่อง (ทำครั้งเดียว)
-เข้าเว็บไซต์ git-scm.com แล้วกดดาวน์โหลดเวอร์ชันสำหรับ Windows
+### 🌐 ทดลองใช้งานโปรเจ๊ค
 
-เปิดไฟล์ติดตั้งที่ดาวน์โหลดมา กด Next ไปเรื่อย ๆ ตามค่าเริ่มต้น (Default) จนเสร็จสิ้น
-ตรวจสอบการติดตั้ง: เปิด Terminal ใน VS Code หรือ Command Prompt แล้วพิมพ์คำสั่ง:
+[Open Project](https://test-ypgs.onrender.com/)
 
-Bash 
-$ git --version
-(ถ้าขึ้นเลขเวอร์ชัน เช่น git version 2.x.x แปลว่าติดตั้งลงเครื่องเรียบร้อยแล้วครับ)
+---
 
-**🔑 ขั้นตอนที่ 2 :** ตั้งค่าตัวตนบนเครื่องคอมพิวเตอร์ (ทำครั้งเดียว)
-ก่อนจะส่งโค้ดขึ้นคลาวด์ เราต้องบอก Git บนเครื่องก่อนว่าเราคือใคร โดยพิมพ์ 2 คำสั่งนี้ลงใน Terminal:
+## 1️⃣ ติดตั้ง Git (ทำครั้งเดียว)
 
-Bash
-git config --global user.name "ชื่อของคุณเป็นภาษาอังกฤษ" เช่น "Bunkham Yolai"
-git config --global user.email "อีเมลที่ใช้สมัคร GitHub ของคุณ" เช่น "Bun@gmail.com"
+ดาวน์โหลดและติดตั้ง Git จาก:
 
-**🚀 ขั้นตอนที่ 3 : ** เริ่มต้นผูกโปรเจกต์และส่งโค้ดขึ้น GitHub (ตามใบสั่งของคุณ)
-ให้คุณเปิด Terminal ใน VS Code ให้อยู่ในโฟลเดอร์โปรเจกต์หลักของคุณ แล้วพิมพ์ชุดคำสั่งตามลำดับด้านล่างนี้ได้เลยครับ:
+https://git-scm.com
 
-Bash
-git init                           # 1. สร้างถังเก็บประวัติ Git เปล่าๆ ในโฟลเดอร์เรา
-git add .                          # 2. ทำการเลือกไฟล์ทั้งหมดในโฟลเดอร์เตรียมส่ง (ใช้ . แทนชื่อไฟล์เพื่อให้แอดทั้งหมด)
-git commit -m "first commit"       # 3. บันทึกและตั้งชื่อเวอร์ชันแรก
-git branch -M main                 # 4. เปลี่ยนชื่อสาขาหลักให้เป็นชื่อ "main" ตามมาตรฐานใหม่
-git remote add origin https://github.com/bisket77/test2.git  # 5. ต่อสายลิงก์เชื่อมไปยัง GitHub ปลายทาง
-git push -u origin main            # 6. ผลักดันโค้ดบนเครื่องทั้งหมดทะยานขึ้น GitHub ปลายทาง
+หลังติดตั้งเสร็จ ตรวจสอบว่าใช้งานได้หรือไม่:
 
-2. ฝั่งกรณีเคยทำ Git บนเครื่องไว้แล้ว อยากจะผูกลิงก์เพื่อส่งขึ้น GitHub ไปที่ลิงก์ใหม่ ให้รันสั้น ๆ แค่กลุ่มนี้พอครับ:
+```bash
+git --version
+```
 
+หากแสดงเวอร์ชัน เช่น `git version 2.x.x` แสดงว่าติดตั้งสำเร็จ
 
-  $ git remote add origin https://github.com/bisket77/test2.git
-  $ git branch -M main
-  $ git push -u origin main
+---
 
+## 2️⃣ ตั้งค่า Git (ทำครั้งเดียว)
+
+กำหนดชื่อและอีเมลที่ใช้กับ GitHub
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
+
+ตัวอย่าง
+
+```bash
+git config --global user.name "Bunkham Yolai"
+git config --global user.email "bun@gmail.com"
+```
+
+---
+
+## 3️⃣ อัปโหลดโปรเจกต์ขึ้น GitHub
+
+เปิด Terminal ภายในโฟลเดอร์โปรเจกต์ แล้วรันคำสั่งตามลำดับ
+
+```bash
+git init
+git add .
+git commit -m "first commit" ตั้งชื่ออื่นได้
+git branch -M main
+git remote add origin https://github.com/bisket77/test2.git
+git push -u origin main
+```
+
+---
+
+## 🔄 กรณีเคยใช้ Git อยู่แล้ว
+
+หากโปรเจกต์มี Git อยู่แล้ว และต้องการเชื่อมกับ Repository ใหม่ ให้ใช้คำสั่ง:
+
+```bash
+git remote add origin https://github.com/bisket77/test2.git
+git branch -M main
+git push -u origin main
+```
+
+---
+
+✅ เมื่อ Push สำเร็จ โค้ดจะถูกอัปโหลดขึ้น GitHub Repository เรียบร้อย
