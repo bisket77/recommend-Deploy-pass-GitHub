@@ -341,3 +341,22 @@ git log --oneline
 git remote -v
 ```
 
+# 1. ลบ .git เก่าออก
+Remove-Item -Recurse -Force "C:\Users\Asus TUF\Desktop\STUDENT 2\TERM 3\digi_lab\.git"
+
+# 2. Init ใหม่
+git init
+
+# 3. Add ไฟล์ทั้งหมด
+git add .
+
+# 4. Commit
+git commit -m "first commit"
+
+# 5. ตั้ง Remote ใหม่
+git remote add origin https://github.com/bisket77/Lab_digital.git
+
+# 6. Push ขึ้น GitHub
+git branch -M main
+git push -u origin main
+
